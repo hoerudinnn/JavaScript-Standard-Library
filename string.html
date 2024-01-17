@@ -10,7 +10,7 @@
 
         // Deklarasi variabel name dengan nilai "Hoerudin Permana"
         const name = "Hoerudin Permana";
-        
+
         console.info(name.length); // Menampilkan panjang (jumlah karakter) dari string name 
         console.info(name.toLowerCase()); // Menampilkan string name dengan semua karakter diubah menjadi huruf kecil
         console.info(name.toUpperCase()); // Menampilkan string name dengan semua karakter diubah menjadi huruf besar
@@ -20,6 +20,93 @@
         console.info(input.trim()); // Menampilkan string input setelah dihapus spasi di awal dan akhir menggunakan trim()
         console.info(input); // Menampilkan string input tanpa perubahan
 
+        /*
+        Tentu, berikut adalah penjelasan rinci mengenai beberapa metode (method) string di JavaScript beserta contohnya:
+
+        1. **length:**
+        - **Deskripsi:** Metode ini mengembalikan panjang (jumlah karakter) dari suatu string.
+        - **Contoh:**
+            ```javascript
+            const str = "Hello, World!";
+            console.log(str.length); // Output: 13
+            ```
+
+        2. **toLowerCase:**
+        - **Deskripsi:** Metode ini mengubah semua karakter dalam string menjadi huruf kecil.
+        - **Contoh:**
+            ```javascript
+            const str = "Hello, World!";
+            console.log(str.toLowerCase()); // Output: hello, world!
+            ```
+
+        3. **toUpperCase:**
+        - **Deskripsi:** Metode ini mengubah semua karakter dalam string menjadi huruf besar.
+        - **Contoh:**
+            ```javascript
+            const str = "Hello, World!";
+            console.log(str.toUpperCase()); // Output: HELLO, WORLD!
+            ```
+
+        4. **split:**
+        - **Deskripsi:** Metode ini memecah string menjadi array substring berdasarkan separator yang diberikan.
+        - **Contoh:**
+            ```javascript
+            const str = "Hello, World!";
+            console.log(str.split(" ")); // Output: ["Hello,", "World!"]
+            ```
+
+        5. **trim:**
+        - **Deskripsi:** Metode ini menghapus spasi di awal dan akhir string.
+        - **Contoh:**
+            ```javascript
+            const str = "    Hello, World!    ";
+            console.log(str.trim()); // Output: Hello, World!
+            ```
+
+        6. **charAt:**
+        - **Deskripsi:** Metode ini mengembalikan karakter pada posisi tertentu dalam string.
+        - **Contoh:**
+            ```javascript
+            const str = "Hello, World!";
+            console.log(str.charAt(7)); // Output: W
+            ```
+
+        7. **indexOf:**
+        - **Deskripsi:** Metode ini mengembalikan indeks dari pertama kali ditemukannya suatu substring dalam string.
+        - **Contoh:**
+            ```javascript
+            const str = "Hello, World!";
+            console.log(str.indexOf("World")); // Output: 7
+            ```
+
+        8. **replace:**
+        - **Deskripsi:** Metode ini menggantikan substring tertentu dengan substring baru dalam string.
+        - **Contoh:**
+            ```javascript
+            const str = "Hello, World!";
+            console.log(str.replace("World", "Universe")); // Output: Hello, Universe!
+            ```
+
+        9. **substring:**
+        - **Deskripsi:** Metode ini mengembalikan substring dari indeks tertentu hingga indeks tertentu dalam string.
+        - **Contoh:**
+            ```javascript
+            const str = "Hello, World!";
+            console.log(str.substring(7, 12)); // Output: World
+            ```
+
+        10. **concat:**
+            - **Deskripsi:** Metode ini menggabungkan dua atau lebih string.
+            - **Contoh:**
+            ```javascript
+            const str1 = "Hello";
+            const str2 = "World";
+            console.log(str1.concat(", ", str2, "!")); // Output: Hello, World!
+            ```
+
+        Metode-metode di atas membantu dalam memanipulasi dan mengelola string dalam JavaScript. Setiap metode memiliki kegunaan dan fungsionalitasnya sendiri. Dengan menggunakan metode-metode ini, Anda dapat dengan mudah melakukan operasi pada string sesuai dengan kebutuhan Anda.
+        
+        */
 
     </script>
 </body>
