@@ -1,0 +1,59 @@
+JavaScript Standard Library (juga dikenal sebagai ECMAScript Standard Library) mencakup serangkaian objek dan fungsi bawaan yang dapat digunakan dalam pengembangan JavaScript. Ini termasuk objek dan metode untuk memanipulasi string, array, objek tanggal, matematika, dan banyak lagi. Di bawah ini, saya akan menjelaskan beberapa bagian utama dari JavaScript Standard Library beserta contohnya.
+
+1. Object (Objek)
+Object.assign(): Menggabungkan properti dari satu atau lebih objek ke objek target.
+
+const target = { a: 1, b: 2 };
+const source = { b: 3, c: 4 };
+const result = Object.assign(target, source);
+console.log(result); // Output: { a: 1, b: 3, c: 4 }
+
+2. String (String)
+String.length: Mengembalikan panjang string.
+const message = 'Hello, World!';
+console.log(message.length); // Output: 13
+String.toUpperCase() dan String.toLowerCase(): Mengonversi string menjadi huruf besar atau huruf kecil.
+
+const text = 'JavaScript';
+console.log(text.toUpperCase()); // Output: JAVASCRIPT
+console.log(text.toLowerCase()); // Output: javascript
+
+3. Array (Array)
+Array.push() dan Array.pop(): Menambah atau menghapus elemen dari akhir array.
+const numbers = [1, 2, 3];
+numbers.push(4);
+console.log(numbers); // Output: [1, 2, 3, 4]
+numbers.pop();
+console.log(numbers); // Output: [1, 2, 3]
+Array.join(): Menggabungkan semua elemen array menjadi satu string.
+const fruits = ['apple', 'banana', 'orange'];
+const result = fruits.join(', ');
+console.log(result); // Output: apple, banana, orange
+
+
+4. Date (Tanggal)
+new Date(): Membuat objek Tanggal yang mewakili waktu saat ini.
+const currentDate = new Date();
+console.log(currentDate); // Output: Tanggal saat ini
+Date.getFullYear() dan Date.getMonth(): Mendapatkan tahun dan bulan dari objek Tanggal.
+
+console.log(currentDate.getFullYear()); // Output: Tahun saat ini
+console.log(currentDate.getMonth());    // Output: Bulan saat ini (mulai dari 0)
+
+5. Math (Matematika)
+Math.random(): Menghasilkan bilangan acak antara 0 (inklusif) dan 1 (eksklusif).
+const randomNumber = Math.random();
+console.log(randomNumber); // Output: Bilangan acak antara 0 dan 1
+Math.floor() dan Math.ceil(): Membulatkan ke bawah atau ke atas ke bilangan bulat terdekat.
+
+const decimalNumber = 5.78;
+console.log(Math.floor(decimalNumber)); // Output: 5
+console.log(Math.ceil(decimalNumber));  // Output: 6
+
+Itu hanya sebagian kecil dari JavaScript Standard Library. Terdapat banyak lagi objek dan metode yang dapat Anda manfaatkan sesuai kebutuhan dalam pengembangan JavaScript. Pemahaman yang baik tentang standar perpustakaan ini akan meningkatkan efisiensi dan kualitas kode Anda.
+
+
+
+
+
+
