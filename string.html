@@ -8,16 +8,18 @@
 <body>
     <script>
 
+        // Deklarasi variabel name dengan nilai "Hoerudin Permana"
         const name = "Hoerudin Permana";
+        
+        console.info(name.length); // Menampilkan panjang (jumlah karakter) dari string name 
+        console.info(name.toLowerCase()); // Menampilkan string name dengan semua karakter diubah menjadi huruf kecil
+        console.info(name.toUpperCase()); // Menampilkan string name dengan semua karakter diubah menjadi huruf besar
+        console.info(name.split(" ")); // Menampilkan array yang berisi kata-kata yang dipisahkan dari string name berdasarkan spasi
+       
+        const input = "    Input data   ";  // Deklarasi variabel input dengan nilai "    Input data   "      
+        console.info(input.trim()); // Menampilkan string input setelah dihapus spasi di awal dan akhir menggunakan trim()
+        console.info(input); // Menampilkan string input tanpa perubahan
 
-        console.info(name.length);
-        console.info(name.toLowerCase());
-        console.info(name.toUpperCase());
-        console.info(name.split(" "));
-
-        const input = "    Input data   ";
-        console.info(input.trim());
-        console.info(input);
 
     </script>
 </body>
