@@ -18,9 +18,6 @@
             person.forEach((value, index) => console.info(`No.${index} ${value}`)); // Menggunakan metode forEach dengan arrow function (fungsi panah).
 
             person.forEach(value => console.info(`${value}`)); // Menggunakan metode forEach dengan arrow function tanpa menyertakan indeks.
-        
-            
-
         } */
 
         /* {
@@ -56,7 +53,18 @@
         } */
         
         {
-            
+            const stack = [];
+
+            stack.push("Hoerudin");
+            stack.push("Permana");
+            stack.push("Nugraha");
+            stack.push("Budi");
+
+            console.log(stack.pop());
+            console.log(stack.pop());
+            console.log(stack.pop());
+            console.log(stack)
+
             /*
             push digunakan untuk menambahkan elemen ke dalam tumpukan, sehingga elemen tersebut berada di atas tumpukan.
             pop digunakan untuk mengambil elemen dari atas tumpukan, sehingga elemen yang terakhir dimasukkan adalah yang pertama diambil.
