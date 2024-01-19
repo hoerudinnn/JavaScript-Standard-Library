@@ -110,7 +110,28 @@
 
         {
             // Array transform
-            
+            // Membuat array 'names' yang berisi beberapa nama
+            const names = ["Eko", "Budi", "Jaya"];
+
+            // Menggunakan metode map untuk mengubah semua elemen array 'names' menjadi huruf besar
+            const mapArray = names.map(value => value.toUpperCase());
+            console.log(mapArray);  // Output: [ 'EKO', 'BUDI', 'JAYA' ]
+
+            // Menggunakan metode reduce untuk menggabungkan semua elemen array 'names' menjadi satu string dengan spasi di antara mereka
+            const reduceArray = names.reduce((before, value) => before + " " + value);
+            console.log(reduceArray);  // Output: Eko Budi Jaya
+
+            // Menggunakan metode reduceRight untuk menggabungkan semua elemen array 'names' dari kanan ke kiri menjadi satu string dengan spasi di antara mereka
+            const namesRight = names.reduceRight((before, value) => before + " " + value);
+            console.log(namesRight);  // Output: Jaya Budi Eko
+
+            // Membuat array 'numbers' yang berisi angka-angka
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            // Menggunakan metode reduce untuk menjumlahkan semua elemen array 'numbers'
+            const sum = numbers.reduce((sum, value) => sum + value);
+            console.log(sum);  // Output: 55
+
         }
 
     </script>
