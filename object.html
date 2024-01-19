@@ -51,6 +51,11 @@
         }
         
         {
+        /*
+        Object.assign adalah metode yang digunakan untuk menyalin nilai dari satu 
+        atau lebih objek ke objek target. Metode ini dapat digunakan untuk menggabungkan p
+        roperti dari objek-objek yang berbeda ke dalam satu objek target.
+        */
             // const target = {a: 1, b: 2}
             // const source1 = {c: 4, b: 3}
             // const source2 = {d: 5, c: 6}
@@ -70,10 +75,33 @@
             console.info(result);
         }
 
+        {
+        /*
+        Object.values adalah metode bawaan pada objek JavaScript yang digunakan untuk mengembalikan 
+        array yang berisi nilai-nilai dari properti enumerable (yang dapat dihitung) dari suatu objek. 
+        Metode ini membantu Anda mengakses nilai properti secara mudah.
+
+        Object.getOwnPropertyNames adalah metode yang digunakan untuk mengembalikan array 
+        yang berisi nama-nama semua properti (enumerable dan non-enumerable) dari suatu objek.
+        */
+            // object property name & value
+            const person = {
+                firstName: "Hoerudin",
+                age: 22
+            };
+
+            console.log(Object.values(person));
+            console.log(Object.getOwnPropertyNames(person));
+        }
+
         /*
         Ringkasan:
         Object.freeze: Membekukan objek sepenuhnya, melarang penambahan, penghapusan, dan perubahan nilai properti.
         Object.seal: Mencegah penambahan atau penghapusan properti, tetapi masih memungkinkan perubahan nilai propertinya.
+
+        Penting untuk dicatat bahwa Object.assign tidak mendalam (shallow), artinya jika nilai properti adalah objek, 
+        objek tersebut tidak disalin secara rekursif. Jika Anda perlu menyalin secara mendalam, 
+        Anda perlu menggunakan metode yang lebih canggih atau menggunakan library eksternal seperti Lodash.
         */
         
 
