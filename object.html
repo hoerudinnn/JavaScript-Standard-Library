@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        {
+            /*
+            Object.freeze digunakan untuk membekukan objek, yang berarti setelah objek dibekukan, 
+            tidak ada perubahan yang dapat dilakukan pada objek tersebut, 
+            termasuk penambahan, penghapusan, atau perubahan nilai propertinya.
+            */
+
+            const person = {
+                firstName: "Hoerudin",
+                lastName: "Permana"
+            }
+
+            Object.freeze(person);   
+
+            person.firstName = "Budi";
+
+            console.log(person.firstName);
+            console.log(person.lastName);
+            console.log(person);
+        }
+
+        {
+            /*
+            Object.seal juga digunakan untuk mencegah penambahan atau penghapusan properti, 
+            tetapi berbeda dari Object.freeze, Object.seal memungkinkan Anda untuk mengubah nilai propertinya.
+            */
+
+            const car = {
+                brand: "Toyota",
+                model: "Avanza"
+            }
+
+            Object.seal(car);
+
+            car.year = 2011;
+            delete car.brand;
+
+            car.brand = "Daihatsu";
+
+            console.log(car);
+        }
+        
+        {
+            // const target = {a: 1, b: 2}
+            // const source1 = {c: 4, b: 3}
+            // const source2 = {d: 5, c: 6}
+
+            // const result = Object.assign(target, source1, source2)
+            // console.log(result);
+
+            const target = {
+                firstName: "Hoerudin"
+            }
+
+            const source = {
+                lastName: "Permana"
+            }
+
+            const result = Object.assign(target, source);
+            console.info(result);
+        }
+
+        /*
+        Ringkasan:
+        Object.freeze: Membekukan objek sepenuhnya, melarang penambahan, penghapusan, dan perubahan nilai properti.
+        Object.seal: Mencegah penambahan atau penghapusan properti, tetapi masih memungkinkan perubahan nilai propertinya.
+        */
+        
+
+    </script>
+</body>
+</html>
