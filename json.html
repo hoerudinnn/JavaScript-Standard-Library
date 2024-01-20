@@ -8,6 +8,13 @@
 <body>
     <script>
 
+        /*
+        JSON, atau JavaScript Object Notation, adalah format data ringan yang digunakan untuk 
+        pertukaran data antar aplikasi. JSON diturunkan dari JavaScript, tetapi sekarang mendukung 
+        berbagai bahasa pemrograman. Formatnya sangat mudah dibaca dan ditulis oleh manusia, 
+        sementara juga mudah dipahami oleh mesin. JSON terdiri dari pasangan nama/kunci dan nilai, yang dinyatakan dalam objek dan array.
+        */
+
         const person = {
             firstName: "Hoerudin",
             lastName: "Permana",
@@ -26,6 +33,18 @@
 
         const objectJson = JSON.parse(json);
         console.info(objectJson);
+
+        /*
+        Catatan Penting:
+        1. Nama kunci (key) dan string harus diapit oleh tanda kutip ganda (").
+        2. JSON tidak mendukung komentar, sehingga Anda tidak dapat menambahkan komentar ke dalam JSON.
+        3. Nilai objek atau elemen array harus terdapat di antara koma jika ada lebih dari satu.
+        
+        JSON sering digunakan dalam pertukaran data antar server dan aplikasi klien, 
+        terutama dalam pengembangan web. Misalnya, ketika mengirim data dari server ke browser atau sebaliknya, 
+        atau ketika berkomunikasi dengan API. Kelebihan JSON meliputi kemudahan dibaca, mudah dipahami, 
+        dan mendukung struktur data yang bersifat nested.
+        */
 
     </script>
 </body>
