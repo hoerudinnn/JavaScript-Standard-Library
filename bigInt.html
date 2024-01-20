@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const a = BigInt(Number.MAX_SAFE_INTEGER);
+        const b = BigInt(Number.MAX_SAFE_INTEGER);
+
+        const c = a + b;
+
+        console.info(c);
+        console.info(typeof c);
+
+/*
+        Dalam JavaScript, tipe data BigInt diperkenalkan sebagai bagian dari ECMAScript 2020 (ES11) untuk memungkinkan representasi angka bulat yang sangat besar yang tidak dapat diwakili oleh tipe data Number biasa. Tipe data BigInt memungkinkan Anda untuk bekerja dengan angka bulat yang lebih besar dari yang dapat direpresentasikan oleh Number, yang terbatas oleh spesifikasi IEEE 754 Double Precision Floating Point.
+
+        Berikut adalah penjelasan lengkap dan rinci tentang BigInt di JavaScript:
+
+        ### Representasi dan Pembuatan BigInt:
+        1. **Deklarasi:**
+        BigInt dideklarasikan dengan menambahkan huruf "n" di akhir angka atau dengan menggunakan konstruktor BigInt().
+
+        ```javascript
+        const bigIntNumber = 1234567890123456789012345678901234567890n;
+        const anotherBigInt = BigInt("1234567890123456789012345678901234567890");
+        ```
+
+        2. **Tanda Pengenal:**
+        Tanda pengenal BigInt adalah huruf "n" yang ditambahkan di akhir angka, membedakan BigInt dari Number.
+
+        ```javascript
+        const bigIntNumber = 123n;
+        ```
+
+        ### Operasi dan Kalkulasi:
+        1. **Operasi Aritmatika:**
+        BigInt mendukung operasi aritmatika seperti penambahan, pengurangan, perkalian, dan pembagian.
+
+        ```javascript
+        const result = 10n + 5n; // Penambahan
+        const product = 20n * 3n; // Perkalian
+        ```
+
+        2. **Pembagian:**
+        Hasil pembagian akan selalu dibulatkan ke bawah ke bilangan bulat terdekat.
+
+        ```javascript
+        const quotient = 10n / 3n; // Hasilnya 3n, bukan 3.333...
+        ```
+
+        3. **Modulus:**
+        Operasi modulo untuk BigInt juga dapat digunakan.
+
+        ```javascript
+        const remainder = 10n % 3n; // Hasilnya 1n
+        ```
+
+        ### Perbandingan:
+        Operasi perbandingan dapat dilakukan antara BigInt dan Number atau antara dua BigInt.
+
+        ```javascript
+        const compareResult = 5n > 3; // Hasilnya true
+        ```
+
+        ### Keterbatasan dan Penggunaan yang Disarankan:
+        1. **Tidak dapat dicampur dengan Number:**
+        BigInt dan Number tidak dapat dicampur langsung dalam operasi aritmatika atau perbandingan. Konversi eksplisit diperlukan.
+
+        ```javascript
+        const sum = 10n + BigInt(5); // Benar
+        ```
+
+        2. **Kalkulasi yang Lebih Lambat:**
+        BigInt biasanya membutuhkan lebih banyak sumber daya komputasi daripada Number, jadi perlu diperhatikan ketika bekerja dengan kalkulasi besar.
+
+        ### Contoh Penggunaan di Kehidupan Nyata:
+        1. **ID Unik:**
+        BigInt cocok untuk merepresentasikan ID unik atau nomor seri yang sangat besar.
+
+        ```javascript
+        const uniqueID = BigInt("12345678901234567890123456789012345678901234567890123456789012345678901234567890");
+        ```
+
+        2. **Waktu Unix dalam BigInt:**
+        Representasi waktu Unix dalam milidetik menggunakan BigInt untuk menangani nilai yang besar.
+
+        ```javascript
+        const unixTimestamp = BigInt(Date.now());
+        ```
+
+        Dengan BigInt, JavaScript dapat menangani perhitungan yang melibatkan angka bulat yang sangat besar dengan lebih efektif dan akurat daripada sebelumnya, memberikan fleksibilitas tambahan dalam pemrograman yang membutuhkan representasi angka bulat besar.
+
+*/
+
+    </script>
+</body>
+</html>
