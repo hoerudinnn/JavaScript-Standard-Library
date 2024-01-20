@@ -1,0 +1,13 @@
+{   
+    "firstName":"Hoerudin",
+    "lastName":"Permana",
+    "address":
+        {
+            "city":"Bogor",
+            "province":"Jawa Barat",
+            "country":"Indonesia"
+        },
+    "hobbies":[
+        "Coding","Game","Futsal"
+        ]
+    }
