@@ -9,18 +9,20 @@
     <script>
 
         let date1 = new Date()
-        console.info(date1);
+        console.info(date1.getTime());
 
         let date2 = new Date(2024, 1, 1);
-        console.info(date2)
+        console.info(date2.getTime())
 
         let date3 = new Date (2001, 12, 30, 14, 0, 5, 123);
-        console.info(date3);
+        console.info(date3.getTime());
 
         let date4 = new Date (129478439230232);
-        console.info(date4);
+        console.info(date4.getTime());
 
-        
+        console.info(Date.now());
+
+
 
     </script>
 </body>
