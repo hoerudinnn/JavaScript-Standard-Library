@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Membuat objek Set baru
+        const set = new Set();
+
+        // Menambahkan elemen ke dalam Set
+        set.add("Eko");
+        set.add("Eko"); // Elemen duplikat tidak akan ditambahkan, Set hanya menyimpan nilai unik
+        set.add("Budi");
+        set.add("Santoso");
+
+        // Menampilkan seluruh isi Set ke dalam console
+        console.info(set);
+
+        // Melakukan iterasi melalui setiap elemen dalam Set menggunakan metode forEach
+        set.forEach((value) => console.info(value));
+
+        /*
+        Keterangan:
+
+        1. const set = new Set();: Membuat objek Set baru dengan nama set.
+        2. set.add("Eko");, set.add("Budi");, dan set.add("Santoso");: Menambahkan elemen ke dalam Set. Perlu diingat bahwa Set hanya menyimpan nilai unik, sehingga jika ada elemen yang sama, elemen duplikat tidak akan ditambahkan.
+        3. console.info(set);: Menampilkan seluruh isi Set ke dalam console.
+        4. set.forEach((value) => console.info(value));: Melakukan iterasi melalui setiap elemen dalam Set menggunakan metode forEach, dan menampilkan nilai masing-masing elemen ke dalam console.
+        */
+
+        /*
+        Objek `Set` di JavaScript adalah struktur data koleksi yang memungkinkan penyimpanan nilai unik. Dengan kata lain, Set tidak mengizinkan duplikat nilai. Berikut adalah beberapa fitur dan contoh penggunaan objek `Set`:
+
+        ### 1. **Deklarasi dan Inisialisasi:**
+        ```javascript
+        const mySet = new Set();
+        ```
+
+        ### 2. **Menambahkan Elemen:**
+        ```javascript
+        mySet.add("Apple");
+        mySet.add("Banana");
+        mySet.add("Apple"); // Elemen duplikat tidak akan ditambahkan
+        ```
+
+        ### 3. **Ukuran dan Pengecekan Kehadiran:**
+        ```javascript
+        console.log(mySet.size);         // Output: 2 (karena elemen duplikat diabaikan)
+        console.log(mySet.has("Apple")); // Output: true
+        ```
+
+        ### 4. **Menghapus Elemen:**
+        ```javascript
+        mySet.delete("Banana");
+        console.log(mySet.has("Banana")); // Output: false
+        ```
+
+        ### 5. **Iterasi Melalui Elemen:**
+        ```javascript
+        for (const value of mySet) {
+            console.log(value);
+        }
+        // Output:
+        // Apple
+        ```
+
+        ### 6. **Menggunakan Tipe Data Non-Primitif:**
+        ```javascript
+        const obj = { key: "value" };
+        mySet.add(obj);
+        ```
+
+        ### 7. **Menggunakan `forEach`:**
+        ```javascript
+        mySet.forEach((value) => {
+            console.log(value);
+        });
+        ```
+
+        ### 8. **Mengonversi Set ke Array:**
+        ```javascript
+        const setToArray = Array.from(mySet);
+        ```
+
+        Objek `Set` berguna ketika Anda perlu menyimpan nilai unik dan tidak peduli dengan urutan elemen. Perlu diingat bahwa elemen dalam Set dianggap sama jika mereka memiliki nilai yang sama, sehingga elemen dengan tipe data yang berbeda tetapi nilai yang sama dianggap setara dan hanya satu yang akan disimpan.
+        */
+
+    </script>
+</body>
+</html>
