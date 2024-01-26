@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        Objek Map di JavaScript adalah koleksi dari pasangan key-value, 
+        di mana setiap key dan value dapat berupa tipe data apa pun. 
+        Berbeda dengan objek JavaScript biasa, Map memungkinkan penggunaan 
+        tipe data non-primitif sebagai kunci, dan mempertahankan urutan penyisipan elemen.
+        */
+       
+        // Membuat objek Map baru
+        const map = new Map();
+
+        // Menambahkan pasangan key-value ke dalam Map
+        map.set("Name", "Hoerudin");
+        map.set("Address", "Indonesia");
+
+        // Menampilkan seluruh isi Map ke dalam console
+        console.info(map);
+
+        // Menampilkan nilai yang terkait dengan kunci "Name" dan "Address" ke dalam console
+        console.info(map.get("Name"));
+        console.info(map.get("Address"));
+
+        // Melakukan iterasi melalui setiap elemen dalam Map menggunakan loop for...of
+        for (const element of map) {
+            // Menampilkan key dan value masing-masing elemen ke dalam console
+            console.info(`${element[0]} ${element[1]}`);
+        }
+
+        // Melakukan iterasi melalui setiap elemen dalam Map menggunakan metode forEach
+        map.forEach((value, key) => console.info(`${key}: ${value}`));
+
+        /*
+        Keterangan:
+
+        1. const map = new Map();: Membuat objek Map baru dengan nama map.
+        2. map.set("Name", "Hoerudin"); dan map.set("Address", "Indonesia");: Menambahkan pasangan key-value ke dalam Map, yaitu "Name" dengan nilai "Hoerudin" dan "Address" dengan nilai "Indonesia".
+        3. console.info(map);: Menampilkan seluruh isi Map ke dalam console.
+        4. console.info(map.get("Name")); dan console.info(map.get("Address"));: Menampilkan nilai yang terkait dengan kunci "Name" dan "Address" ke dalam console.
+        5. for (const element of map) { ... }: Melakukan iterasi melalui setiap elemen dalam Map menggunakan loop for...of.
+        6. console.info(${element[0]} ${element[1]});: Menampilkan key dan value masing-masing elemen ke dalam console.
+        7. map.forEach((value, key) => console.info(${key}: ${value}));: Melakukan iterasi melalui setiap elemen dalam Map menggunakan metode forEach, dan menampilkan key dan value masing-masing elemen ke dalam console.
+        */
+
+
+    </script>
+</body>
+</html>
