@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        {
+            // Membuat dua simbol untuk merepresentasikan properti firstName dan lastName
+            const firstName = Symbol();
+            const lastName = Symbol();
+
+            // Membuat objek kosong bernama person
+            const person = {};
+            
+            // Menambahkan properti firstName dan lastName ke objek person menggunakan simbol
+            person[firstName] = "John";
+            person[lastName] = "Doe";
+
+            // Menampilkan objek person ke dalam console
+            console.info(person);
+        }
+
+        {
+            // symbol for
+
+            // Membuat simbol dengan menggunakan Symbol.for, yang mengidentifikasi simbol berdasarkan string yang sama
+            console.info(Symbol.for("firstName") === Symbol.for("firstName"));
+
+            // Membuat objek kosong bernama person
+            const person = {};
+
+            // Menambahkan properti firstName dan lastName ke objek person menggunakan simbol yang dibuat dengan Symbol.for
+            person[Symbol.for("firstName")] = "John";
+            person[Symbol.for("lastName")] = "Doe";
+
+            // Menampilkan objek person ke dalam console
+            console.info(person);
+
+            // Menampilkan nilai properti firstName dan lastName menggunakan simbol yang dibuat dengan Symbol.for
+            console.info(person[Symbol.for("firstName")]);
+            console.info(person[Symbol.for("lastName")]);
+        }
+
+        /*
+        Keterangan:
+
+        1. Pada blok pertama, simbol (Symbol) digunakan untuk membuat properti firstName dan lastName pada objek person. Ini membuat properti yang unik dan tidak dapat diakses secara konvensional.
+        2. Pada blok kedua, Symbol.for digunakan untuk membuat simbol dengan nama yang diidentifikasi oleh string yang sama. Ini memastikan bahwa dua simbol dengan nama yang sama akan diidentifikasi sebagai simbol yang sama. Properti firstName dan lastName pada objek person diakses menggunakan simbol yang dibuat dengan 
+        */
+
+    </script>
+</body>
+</html>
