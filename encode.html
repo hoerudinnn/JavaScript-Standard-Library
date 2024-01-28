@@ -9,31 +9,39 @@
     <script>
 
         {
-            // encode dan decode uri
+            // Bagian Pertama: Encode dan Decode URI
 
+            // URL yang akan diencode dan didecode
             const url = "http://contoh.com/?name=Hoerudin Putra Permana";
             console.info(url);
 
+            // Menggunakan encodeURI untuk mengencode URL
             const encoded = encodeURI(url);
             console.info(encoded);
 
+            // Menggunakan decodeURI untuk mendecode URL
             const decoded = decodeURI(encoded);
             console.info(decoded);
         }
 
         {
-            // encode dan decode uri component
+            // Bagian Kedua: Encode dan Decode URI Component
 
+            // Nilai yang akan diencode dan didecode
             const value = "Hoerudin&Putra=Permana";
-            const url = "http://contoh.com/?name=";
-            console.info(url + value);
+            const baseUrl = "http://contoh.com/?name=";
+            console.info(baseUrl + value);
 
-            const encoded = encodeURIComponent(value);
-            console.info(url + encoded);
+            // Menggunakan encodeURIComponent untuk mengencode nilai
+            const encodedValue = encodeURIComponent(value);
+            console.info(baseUrl + encodedValue);
 
-            const decoded = decodeURIComponent(encoded);
-            console.info(url + decoded);
+            // Menggunakan decodeURIComponent untuk mendecode nilai
+            const decodedValue = decodeURIComponent(encodedValue);
+            console.info(baseUrl + decodedValue);
         }
+        
+
 
     </script>
 </body>
