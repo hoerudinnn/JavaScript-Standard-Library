@@ -51,12 +51,41 @@
         {
             // regex advanced
 
-            const regex = /ek[aiueo]/ig
+            // Ekspresi reguler untuk mencocokkan pola 'ek' diikuti oleh salah satu vokal (a, i, u, e, o)
+            const regex = /ek[aiueo]/ig; // Modifikator 'i': Case-insensitive, 'g': Global (mencari semua kecocokan)
+
+            // String yang berisi variasi kombinasi 'ek' diikuti oleh vokal atau huruf vokal
             const name = "eko, eki, eku, eke, edo, edi, edu, eko, eki";
 
+            let result;
+
+            // Looping untuk mencari semua kecocokan pola 'ek' diikuti oleh vokal dalam string 'name'
             while ((result = regex.exec(name)) !== null) {
                 console.info(result); // Menampilkan hasil pencarian ke console
             }
+
+        }
+
+        {
+
+            // String yang berisi variasi kombinasi 'ek' diikuti oleh vokal atau huruf vokal, dipisahkan oleh koma
+            const name = "edo, eki, eku, eke, edo, edi, edu, eko, eki";
+
+            // Menggunakan metode 'match()' untuk mencari semua kecocokan pola 'ek' diikuti oleh vokal dalam string 'name'
+            console.info(name.match(/ek[aiueo]/ig));
+
+            // Menggunakan metode 'search()' untuk mencari indeks pertama kemunculan pola 'ek' diikuti oleh vokal dalam string 'name'
+            console.info(name.search(/ek[aiueo]/ig));
+
+            // Menggunakan metode 'replace()' untuk menggantikan satu kemunculan pertama pola 'ek' diikuti oleh vokal dengan string "kamu"
+            console.info(name.replace(/ek[aiueo]/i, "kamu"));
+
+            // Menggunakan metode 'replaceAll()' untuk menggantikan semua kemunculan pola 'ek' diikuti oleh vokal dengan string "kamu"
+            console.info(name.replaceAll(/ek[aiueo]/ig, "kamu"));
+
+            // Menggunakan metode 'split()' untuk membagi string 'name' berdasarkan pola 'e', dengan modifikator 'i' dan 'g'
+            console.info(name.split(/e/ig));
+
         }
 
     </script>
