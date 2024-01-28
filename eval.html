@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const script = "alert('Anda di Hack')";
+
+        eval(script);
+
+        /*
+        Kode di atas menggunakan fungsi `eval()` untuk mengeksekusi skrip JavaScript yang dihasilkan dinamis, 
+        dalam hal ini adalah string `"alert('Anda di Hack')"`. Penggunaan `eval()` dapat memunculkan masalah keamanan, 
+        terutama jika string tersebut berasal dari input pengguna atau sumber yang tidak dipercayai.
+
+        **Peringatan:**
+        1. Penggunaan `eval()` dapat mengeksekusi kode JavaScript dari string dan dapat menyebabkan potensi masalah keamanan, termasuk injeksi kode.
+        2. Sebaiknya hindari penggunaan `eval()` terutama jika string yang di-eval berasal dari sumber yang tidak dipercayai.
+
+        Penting untuk selalu memvalidasi dan membersihkan input sebelum menggunakan `eval()` 
+        atau menghindari penggunaan `eval()` sepenuhnya jika tidak diperlukan, terutama dalam konteks keamanan. 
+        Sebagai alternatif, pertimbangkan metode eksekusi kode yang lebih aman seperti fungsi `Function` atau `JSON.parse`.
+        */
+
+    </script>
+</body>
+</html>
