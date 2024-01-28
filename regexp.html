@@ -8,10 +8,27 @@
 <body>
     <script>
 
-        const person = {};
+        {
+            // Mendefinisikan konstanta 'name' dengan nilai "Hoerudin Permana"
+            const name = "Hoerudin Permana";
 
-        if(person) {
-            
+            // Mendefinisikan konstanta 'regex' sebagai ekspresi reguler yang mencari kata 'Hoer'
+            const regex = /Hoer/;
+
+            // Menggunakan ekspresi reguler untuk mencari kecocokan di dalam string 'name'
+            const result = regex.exec(name);
+            console.info(result);  // Menampilkan hasil pencarian ke console
+
+            // Menggunakan ekspresi reguler untuk mencari kecocokan di dalam string "tidak ada"
+            console.info(regex.exec("tidak ada"));  // Menampilkan hasil pencarian ke console
+
+            // Menggunakan ekspresi reguler untuk menguji apakah string 'name' mengandung kata 'Hoer'
+            const test = regex.test(name);
+            console.info(test);  // Menampilkan hasil pengujian ke console
+
+            // Menggunakan ekspresi reguler untuk menguji apakah string "tidak ada" mengandung kata 'Hoer'
+            console.info(regex.test("tidak ada"));  // Menampilkan hasil pengujian ke console
+
         }
 
     </script>
