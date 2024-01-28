@@ -8,22 +8,44 @@
 <body>
     <script>
 
+        // Objek person dengan properti middleName
         const person = {
             middleName: "Putra"
         };
 
-        Reflect.set(person, "firtsName", "Hoerudin");
+        // Menggunakan Reflect.set untuk menetapkan nilai properti firstName dan lastName pada objek person
+        Reflect.set(person, "firstName", "Hoerudin");
         Reflect.set(person, "lastName", "Permana");
 
+        // Menampilkan objek person setelah perubahan
         console.info(person);
 
-        console.info(Reflect.get(person, "firtsName"));
+        // Menggunakan Reflect.get untuk mengakses nilai properti firstName, middleName, dan lastName pada objek person
+        console.info(Reflect.get(person, "firstName"));
         console.info(Reflect.get(person, "middleName"));
         console.info(Reflect.get(person, "lastName"));
 
-        console.info(Reflect.has(person, "firtsName"));
+        // Menggunakan Reflect.has untuk memeriksa keberadaan properti firstName, middleName, dan lastName pada objek person
+        console.info(Reflect.has(person, "firstName"));
         console.info(Reflect.has(person, "middleName"));
         console.info(Reflect.has(person, "lastName"));
+
+        /*
+        Poin-poin utama yang dapat dijelaskan dari kode di atas:
+
+        1. Menggunakan Reflect.set:
+        Reflect.set digunakan untuk menetapkan nilai properti firstName dan lastName pada objek person.
+        
+        2. Menampilkan Objek setelah Perubahan:
+        Setelah menggunakan Reflect.set, objek person ditampilkan di console untuk melihat perubahan nilai propertinya.
+        
+        3. Menggunakan Reflect.get:
+        Reflect.get digunakan untuk mengakses nilai properti firstName, middleName, dan lastName pada objek person.
+        
+        4. Menggunakan Reflect.has:
+        Reflect.has digunakan untuk memeriksa keberadaan properti firstName, middleName, dan lastName pada objek person.
+        Output berupa nilai boolean yang menunjukkan apakah properti tersebut ada atau tidak.
+        */
 
     </script>
 </body>
