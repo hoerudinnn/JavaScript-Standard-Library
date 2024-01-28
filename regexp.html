@@ -9,7 +9,8 @@
     <script>
 
         {
-            
+            // regex test
+
             const name = "Hoerudin Permana"; // Mendefinisikan konstanta 'name' dengan nilai "Hoerudin Permana"
             const regex = /Hoer/;  // Mendefinisikan konstanta 'regex' sebagai ekspresi reguler yang mencari kata 'Hoer'
 
@@ -26,7 +27,8 @@
         }
 
         {
-        
+            // regex modifier
+
             const name = "eko kurniawan\neKo khannedy\Edi Kurniawan"; // String yang berisi beberapa baris dengan variasi penulisan nama 'eko kurniawan'
 
             // Ekspresi reguler dengan modifikator 'ig' (global dan case-insensitive)
@@ -47,7 +49,14 @@
         }
 
         {
-            
+            // regex advanced
+
+            const regex = /ek[aiueo]/ig
+            const name = "eko, eki, eku, eke, edo, edi, edu, eko, eki";
+
+            while ((result = regex.exec(name)) !== null) {
+                console.info(result); // Menampilkan hasil pencarian ke console
+            }
         }
 
     </script>
