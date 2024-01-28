@@ -28,15 +28,15 @@
         {
             // regex modifier
             const name = "eko kurniawan\neKo khannedy\Edi Kurniawan";
-            const regex1 = /Eko/g
+            const regex1 = /eko/ig
             const regex2 = /Kurniawan/ig
 
             let result;
-            while (result = regex1.exec(name) !== null) {
+            while ((result = regex1.exec(name)) !== null) {
                 console.info(result);
             }
 
-            while (result = regex2.exec(name) !== null) {
+            while ((result = regex2.exec(name)) !== null) {
                 console.info(result)
             }
         }
