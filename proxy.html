@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proxy</title>
+</head>
+<body>
+    <script>
+
+        // Objek target yang akan di-proxied
+        const target = {
+            middleName: "Putra"
+        };
+
+        // Handler yang mendefinisikan perilaku untuk metode get dan set
+        const handler = {
+            get: function(target, property) {
+                console.info(`Access property: ${property}`);
+                return target[property];
+            },
+            set: function(target, property, value) {
+                console.info(`Change property ${property}: ${value}`);
+                // Mengganti nilai dengan "Tidak boleh NULL" jika nilai yang di-set adalah null
+                if (value == null) {
+                    target[property] = "Tidak boleh NULL";
+                } else {
+                    target[property] = value;
+                }
+            }
+        };
+
+        // Membuat Proxy dengan objek target dan handler yang telah didefinisikan
+        const proxy = new Proxy(target, handler);
+
+        // Menggunakan proxy untuk mengubah nilai properti firstName dan lastName pada objek target
+        proxy.firstName = "Hoerudin";
+        proxy.lastName = null;
+
+        // Mengakses nilai properti menggunakan proxy
+        console.info(proxy.firstName);
+        console.info(proxy.middleName);
+        console.info(proxy.lastName);
+
+        // Menampilkan objek target setelah menggunakan proxy
+        console.info(target);
+
+
+    </script>
+</body>
+</html>
