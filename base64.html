@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // String asli yang akan diencode dan didecode
+        const original = "Hoerudin&Putra=Permana";
+        console.info(original);
+
+        // Menggunakan btoa untuk mengencode string ke dalam basis64
+        const encoded = btoa(original);
+        console.info(encoded);
+
+        // Menggunakan atob untuk mendecode basis64 menjadi string
+        const decoded = atob(encoded);
+        console.info(decoded);
+
+        /*
+        Penjelasan:
+
+1. Encode dengan btoa:
+Menggunakan btoa (binary to ASCII) untuk mengencode string ke dalam basis64. Basis64 encoding digunakan untuk mengonversi data biner menjadi karakter ASCII.
+
+2. Decode dengan atob:
+Menggunakan atob (ASCII to binary) untuk mendecode basis64 menjadi string. Ini mengonversi kembali data biner menjadi string.
+
+3. Output di Console:
+String asli (original), string yang diencode (encoded), dan string yang didecode (decoded) ditampilkan di console untuk melihat perubahan setiap langkah encoding dan decoding.
+        */
+
+
+    </script>
+</body>
+</html>
