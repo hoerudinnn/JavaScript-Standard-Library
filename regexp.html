@@ -26,19 +26,28 @@
         }
 
         {
-            // regex modifier
-            const name = "eko kurniawan\neKo khannedy\Edi Kurniawan";
-            const regex1 = /eko/ig
-            const regex2 = /Kurniawan/ig
+        
+            const name = "eko kurniawan\neKo khannedy\Edi Kurniawan"; // String yang berisi beberapa baris dengan variasi penulisan nama 'eko kurniawan'
+
+            // Ekspresi reguler dengan modifikator 'ig' (global dan case-insensitive)
+            const regex1 = /eko/ig; // Modifikator 'i': Case-insensitive, 'g': Global (mencari semua kecocokan)
+
+            // Ekspresi reguler dengan modifikator 'ig' (global dan case-insensitive)
+            const regex2 = /Kurniawan/ig; // Modifikator 'i': Case-insensitive, 'g': Global (mencari semua kecocokan)
 
             let result;
-            while ((result = regex1.exec(name)) !== null) {
-                console.info(result);
+            while ((result = regex1.exec(name)) !== null) { // Looping untuk mencari semua kecocokan pola 'eko' dalam string 'name'
+                console.info(result); // Menampilkan hasil pencarian ke console
             }
 
-            while ((result = regex2.exec(name)) !== null) {
-                console.info(result)
+            while ((result = regex2.exec(name)) !== null) { // Looping untuk mencari semua kecocokan pola 'Kurniawan' dalam string 'name'
+                console.info(result); // Menampilkan hasil pencarian ke console
             }
+
+        }
+
+        {
+            
         }
 
     </script>
